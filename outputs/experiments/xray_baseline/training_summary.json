@@ -1,0 +1,10 @@
+{
+  "architecture": "mobilenet_v3_small",
+  "epochs_completed": 5,
+  "best_val_macro_f1": 0.9563750261924004,
+  "training_duration_seconds": 1509.3621268999996,
+  "device": "cpu",
+  "pretrained_initialization": true,
+  "selection_metric": "val_macro_f1",
+  "seed": 42
+}

@@ -1,0 +1,95 @@
+{
+  "accuracy": 0.6810897435897436,
+  "macro_f1": 0.5309989537971121,
+  "per_class": {
+    "NORMAL": {
+      "precision": 0.972972972972973,
+      "recall": 0.15384615384615385,
+      "f1": 0.2656826568265683,
+      "support": 234
+    },
+    "PNEUMONIA": {
+      "precision": 0.6626916524701874,
+      "recall": 0.9974358974358974,
+      "f1": 0.7963152507676561,
+      "support": 390
+    }
+  },
+  "confusion_matrix": [
+    [
+      36,
+      198
+    ],
+    [
+      1,
+      389
+    ]
+  ],
+  "class_support": {
+    "NORMAL": 234,
+    "PNEUMONIA": 390
+  },
+  "prediction_counts": {
+    "NORMAL": 37,
+    "PNEUMONIA": 587
+  },
+  "roc_auc_pneumonia": 0.9292187157571773,
+  "positive_class": "PNEUMONIA",
+  "checkpoint": "models/xray/mobilenet_v3_small.pth",
+  "architecture": "mobilenet_v3_small",
+  "test_images": 624,
+  "inference_latency_ms_per_image": 35.43342179490047,
+  "training_duration_seconds": 1509.3621268999996,
+  "split_counts": {
+    "official_train": {
+      "NORMAL": 1341,
+      "PNEUMONIA": 3875,
+      "total": 5216
+    },
+    "official_val_unused": {
+      "NORMAL": 8,
+      "PNEUMONIA": 8,
+      "total": 16
+    },
+    "official_test": {
+      "NORMAL": 234,
+      "PNEUMONIA": 390,
+      "total": 624
+    },
+    "train": {
+      "NORMAL": 1059,
+      "PNEUMONIA": 2887,
+      "total": 3946
+    },
+    "val": {
+      "NORMAL": 187,
+      "PNEUMONIA": 510,
+      "total": 697
+    },
+    "test": {
+      "NORMAL": 234,
+      "PNEUMONIA": 390,
+      "total": 624
+    },
+    "excluded_patient_overlap": {
+      "NORMAL": 94,
+      "PNEUMONIA": 457,
+      "total": 551
+    },
+    "excluded_duplicate_bytes": {
+      "NORMAL": 1,
+      "PNEUMONIA": 21,
+      "total": 22
+    }
+  },
+  "patient_overlap_train_test_before_exclusion": 264,
+  "probabilities_are_calibrated": false,
+  "limitations": [
+    "This is a research prototype, not a clinically validated diagnostic system.",
+    "Test performance on this dataset does not establish safety or generalization to hospitals or other populations.",
+    "The Kermany chest X-ray collection is pediatric and class-imbalanced, so scores can shift on adult or differently labeled data.",
+    "Patient identifiers overlap the official train and test folders. Overlapping patients were removed from training, but the test distribution still reflects that source.",
+    "Class probabilities are softmax scores. They were not calibrated.",
+    "JPEG training images and DICOM uploads can differ in intensity mapping."
+  ]
+}

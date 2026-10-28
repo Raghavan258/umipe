@@ -1,0 +1,78 @@
+{
+  "timestamp_utc": "20261028T125940Z",
+  "args": {
+    "epochs": 5,
+    "batch_size": 32,
+    "lr": 0.001,
+    "data_dir": "C:\\Users\\hp\\Downloads\\archive\\chest_xray",
+    "model": "mobilenet_v3_small",
+    "resume": false,
+    "allow_random_init": false
+  },
+  "class_names": [
+    "NORMAL",
+    "PNEUMONIA"
+  ],
+  "image_size": [
+    224,
+    224
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "seed": 42,
+  "selection_metric": "val_macro_f1",
+  "device": "cpu",
+  "split_counts": {
+    "official_train": {
+      "NORMAL": 1341,
+      "PNEUMONIA": 3875,
+      "total": 5216
+    },
+    "official_val_unused": {
+      "NORMAL": 8,
+      "PNEUMONIA": 8,
+      "total": 16
+    },
+    "official_test": {
+      "NORMAL": 234,
+      "PNEUMONIA": 390,
+      "total": 624
+    },
+    "train": {
+      "NORMAL": 1059,
+      "PNEUMONIA": 2887,
+      "total": 3946
+    },
+    "val": {
+      "NORMAL": 187,
+      "PNEUMONIA": 510,
+      "total": 697
+    },
+    "test": {
+      "NORMAL": 234,
+      "PNEUMONIA": 390,
+      "total": 624
+    },
+    "excluded_patient_overlap": {
+      "NORMAL": 94,
+      "PNEUMONIA": 457,
+      "total": 551
+    },
+    "excluded_duplicate_bytes": {
+      "NORMAL": 1,
+      "PNEUMONIA": 21,
+      "total": 22
+    }
+  },
+  "split_policy": "Official test is held out. Official val is unused because it has too few images for model selection. Validation is a stratified subset of official train. Train files whose patient id also appears in the official test set are excluded from training, as are exact duplicate files."
+}

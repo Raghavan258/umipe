@@ -1,0 +1,18 @@
+{
+  "modality": "XRAY",
+  "model_loaded": true,
+  "model_name": "mobilenet_v3_small",
+  "predicted_class": "PNEUMONIA",
+  "predictions": [
+    {
+      "label": "NORMAL",
+      "probability": 0.004095084499567747
+    },
+    {
+      "label": "PNEUMONIA",
+      "probability": 0.9959049820899963
+    }
+  ],
+  "model_message": "Uncalibrated softmax probabilities from the research baseline.",
+  "probabilities_are_calibrated": false
+}

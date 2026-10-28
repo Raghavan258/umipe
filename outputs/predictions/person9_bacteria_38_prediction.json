@@ -1,0 +1,10 @@
+{
+  "modality": "XRAY",
+  "model_loaded": false,
+  "predictions": [
+    {
+      "label": "Model not trained yet",
+      "probability": 0.0
+    }
+  ]
+}
